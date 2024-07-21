@@ -113,28 +113,26 @@
       </section>
 
       <section id="Contact" class="contact section-padding justify-content-center poppins-regular">
-          <div class="inner">
-            <form action="">
-              <h3 class="poppins-bold text-center">Contact Us</h3>
-              <p class="text-center">Reach out to the ShopShare team for any questions, support, or feedback through our contact form or email address provided.</p>
-              <label class="form-group">
-                <input type="text" class="form-control poppins-semibold" style="border-radius:10px ;"  required>
-                <span class="ms-2 poppins-regular">Your Name</span>
-              </label>
-              <label class="form-group">
-                <input type="text" class="form-control poppins-semibold" style="border-radius:10px ;"  required>
-                <span for="" class="ms-2 poppins-regular">Your Mail</span>
-              </label>
-              <label class="form-group" >
-                <textarea name="" id="" class="form-control poppins-semibold" style="border-radius:10px ;" required></textarea>
-                <span for="" class="ms-2 poppins-regular">Your Message</span>
-              </label>
-              <button class="poppins-semibold">Submit 
-              </button>
+        <div class="inner">
+            <form action="assets/send_email.php" method="post">
+                <h3 class="poppins-bold text-center">Contact Us</h3>
+                <p class="text-center">Reach out to the ShopShare team for any questions, support, or feedback through our contact form or email address provided.</p>
+                <label class="form-group">
+                    <input type="text" id="name" name="name" class="form-control poppins-semibold" style="border-radius:10px;" required>
+                    <span class="ms-2 poppins-regular">Your Name</span>
+                </label>
+                <label class="form-group">
+                    <input type="email" id="email" name="email" class="form-control poppins-semibold" style="border-radius:10px;" required>
+                    <span class="ms-2 poppins-regular">Your Mail</span>
+                </label>
+                <label class="form-group">
+                    <textarea id="message" name="message" class="form-control poppins-semibold" style="border-radius:10px;" required></textarea>
+                    <span class="ms-2 poppins-regular">Your Message</span>
+                </label>
+                <button type="submit" class="poppins-semibold">Submit</button>
             </form>
-          </div>
         </div>
-      </section>
+    </section>
 
       <footer class="footer" style="background-color: #010f0d;">
         <div class="footer-top">

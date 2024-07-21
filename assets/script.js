@@ -30,3 +30,20 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const inputs = document.querySelectorAll('.form-control');
+
+    inputs.forEach(input => {
+        input.addEventListener('input', function() {
+            if (this.value.trim() !== "") {
+                this.classList.add('not-empty');
+            } else {
+                this.classList.remove('not-empty');
+            }
+        });
+
+        // Trigger input event to handle pre-filled values
+        input.dispatchEvent(new Event('input'));
+    });
+});
