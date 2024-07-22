@@ -15,13 +15,8 @@
         // Send email
         if (mail($to, $subject, $body, $headers)) {
             $response = "Thank you for contacting us, $name. We will get back to you shortly.";
-            $status = "success";
         } else {
             $response = "Sorry, there was an error sending your message. Please try again later.";
-            $status = "error";
         }
-    } else {
-        $response = "Invalid request.";
-        $status = "error";
     }
 ?>

@@ -47,3 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
         input.dispatchEvent(new Event('input'));
     });
 });
+function showAlert(message) {
+    alert(message);
+}
