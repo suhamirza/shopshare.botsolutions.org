@@ -14,11 +14,14 @@
 
         // Send email
         if (mail($to, $subject, $body, $headers)) {
-            echo "Thank you for contacting us, $name. We will get back to you shortly.";
+            $response = "Thank you for contacting us, $name. We will get back to you shortly.";
+            $status = "success";
         } else {
-            echo "Sorry, there was an error sending your message. Please try again later.";
+            $response = "Sorry, there was an error sending your message. Please try again later.";
+            $status = "error";
         }
     } else {
-        echo "Invalid request.";
+        $response = "Invalid request.";
+        $status = "error";
     }
 ?>

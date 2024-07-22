@@ -131,6 +131,16 @@
                 </label>
                 <button type="submit" class="poppins-semibold">Submit</button>
             </form>
+            <?php if (isset($response)) : ?>
+            <div id="response" class="response <?php echo $status; ?>">
+                <p><?php echo $response; ?></p>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    alert('<?php echo $response; ?>');
+                });
+            </script>
+        <?php endif; ?>
         </div>
     </section>
 
