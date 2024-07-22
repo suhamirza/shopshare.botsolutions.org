@@ -53,7 +53,7 @@ $(document).ready(function(){
         e.preventDefault();
 
         $.ajax({
-            url: "process_form.php",
+            url: "send_email.php",
             type: "POST",
             data: $(this).serialize(),
             success: function(response){
