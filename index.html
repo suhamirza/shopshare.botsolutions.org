@@ -131,13 +131,11 @@
                 </label>
                 <button type="submit" class="poppins-semibold">Submit</button>
             </form>
-            <?php if (!empty($response)) : ?>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                showAlert('<?php echo $response; ?>');
-            });
-        </script>
-    <?php endif; ?>
+            <?php
+              if (!empty($response)) {
+                  echo $response;
+              }
+            ?>
         </div>
     </section>
 

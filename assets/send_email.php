@@ -14,9 +14,9 @@
 
         // Send email
         if (mail($to, $subject, $body, $headers)) {
-            $response = "Thank you for contacting us, $name. We will get back to you shortly.";
+            $response = "<script>alert('Thank you for contacting us, $name. We will get back to you shortly.');</script>";
         } else {
-            $response = "Sorry, there was an error sending your message. Please try again later.";
+            $response = "<script>alert('Sorry, there was an error sending your message. Please try again later.');</script>";
         }
     }
 ?>
