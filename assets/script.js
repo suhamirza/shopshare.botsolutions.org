@@ -47,6 +47,22 @@ document.addEventListener('DOMContentLoaded', function() {
         input.dispatchEvent(new Event('input'));
     });
 });
-function showAlert(message) {
-    alert(message);
-}
+
+$(document).ready(function(){
+    $("#contactForm").on("submit", function(e){
+        e.preventDefault();
+
+        $.ajax({
+            url: "process_form.php",
+            type: "POST",
+            data: $(this).serialize(),
+            success: function(response){
+                alert(response);
+            },
+            error: function(){
+                alert("Sorry, there was an error sending your message. Please try again later.");
+            }
+        });
+    });
+});
+
